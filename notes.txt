@@ -1,0 +1,207 @@
+what is npm?
+
+npm is node package manager. it allows user to use code written by other without having to write it themselves during development,its world largest software registry
+
+
+what is parcel/webpack?why do we need it?
+
+parcel and webpack both are web bundlers that help developer manager complex projects by combining dependencies into single optimized files. they minify,clean and compact js
+
+
+
+what is npx?
+
+node package execute.it is simply npm package runner
+
+
+what is the diff btwn dependencies and devdependencies?
+
+In application development, dependencies are packages that are essential for an application to function in a production environment. Devdependencies are packages that are only needed for local development and testing
+
+
+wht is tree shaking?
+
+Tree shaking is technique which is used to remove unused code from JS bundles. it works by analyzing the import and export statement in the code to determine which modules are used. This can help in loading time of app
+
+
+- What is Hot Module Replacement?
+
+when you  make changes in your code, Parcel automatically rebuilds the changed files and updates your app in the browser. By default, parcel fully reload the page, but in some case it may perform HMR. its improves the development experience by updating modules in browser at the runtime without needing the whole page refresh
+
+
+
+List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words?
+
+-HMR(hot module replacement)
+-Tree shaking
+-Dev server 
+-Diagnostics
+-multi core
+-reliable caching
+-lazy mode
+-minification
+-image optimization
+-compression
+-code splitting
+-content hashing
+-tranpilation
+
+HMR- hot module replacement it updates the code during runtime,hence the there in no need for refresh.HMR does it by replacing the code module, and the re-evaluating it along with all its parents.
+
+Diagnostics- Parcel gives beautiful errors. it include the exact place the error has occured,along with the hint is to how to fix it
+
+reliable caching -it keep track of everything like tranformation,bundling,optimization that means the server is never built twice, it intregrates with low level OS APIs to find what has changed in milleseconds
+
+tranpilation -parcel tranpiles your JS and css for the targeted browser using browerslist. its is also used for jsx,nodeJS,TS,flow
+
+code splitting - its allows to split your code into seperate bundlers which can be loaded on demand
+
+
+
+- What is `.gitignore`? What should we add and not add into it?
+
+Gitignore file is used in a git repository to ignore the files and directories which are unnecessary 
+to project this will be ignored by the git once the changes as been committed to the Remote repository. 
+like node modules and dist and cache in React because the remote repository can have its own.
+
+
+
+what is differnce btwn package.json and package-lock.json?
+
+package.json defines how to interact with and manage your application. it also focuses on project metadata and specifies 
+the desired version of dependencies package-lock.json ensures deterministic installation by locking the exact versions of
+ dependencies and their dependencies.
+
+
+- Why should I not modify `package-lock.json`?
+
+you should modify it because the purpose of it to track the entire tree of dependencies and its dependencies,
+and the exact version for each dependency. if you commit to package-lock.json  to your code repository. 
+it will everyone configuration is same whosoever clone the repository
+
+
+
+- What is `node_modules` ? Is it a good idea to push that on git?
+
+Node modules is a directory it contain the third party lib and dependencies. it essential manages the dependencies which are packages on which the project depends upon.
+when it install a package using npm it is automatically downloaded and stored into node modules this package are large in size because the contain subsequent dependencies. 
+and uploading this on the server will slow it down, instead of it package.json keeps notes on the dependencies and sub-dependencies that are imported in the project and the downloaded on when and if required
+
+
+- What is the `dist` folder?
+
+the dist folde is the build folder or distribution folder,that contain folder and files that can be hosted on the server. when you make production build the size of the dist decrease to decrease the load on server
+
+- What is "JSX"?
+
+  JavaScript XML is a extension of JS which hellps you right html like code in JavaScript
+
+
+
+- Benifits of JSX?
+  
+Instead of artificially separating technologies by putting markup and logic in separate files,
+React separates concerns with loosely coupled units called “components” that contain both. 
+
+
+
+-How do write comments in jsx?
+
+you can use {/* to write multiline comments */}, /* */ like normal jS
+
+
+
+-What is <React.Fragment></React.Fragment> and <></>?
+
+
+​ React Fragment is a feature in React that allows you to return multiple elements from a React component
+by allowing you to group a list of children without adding extra nodes to the DOM
+
+
+
+-What is virtual Dom?
+
+The virtual dom is programming concept where a "ideal" or "virtual" 
+representation of UI is kept in the memory and synced with "real" Dom by library such as ReactDOM
+
+
+
+- Why we need keys in React? When do we need keys in React?
+ 
+  A “key” is a special string attribute you need to include when creating lists of elements in React. 
+  Keys are used in React to identify which items in the list are changed, updated, or deleted.
+
+ you should use key 
+ when you are rendering a list of elements
+ when you are rendering a list of components
+
+
+ -What is props in react?
+
+ props are special keyword in React that stands for properties and it is used for passing data from one component to other. Data in props are passed in unidirectional flow from parents to children 
+
+
+
+ -What is config-driven UI?
+
+ it is technique of creating interface based on configuration files, such as JSON and typescript. this allows dynamic and customizable UI without hard coding them,the config files defines layouts, styles
+ and other properties of UI elements
+
+
+
+-What is the difference between Named Export, Default export and * as export?
+
+Named exports are useful when you have multiple entities to export, while default exports are suitable for a single, primary entity.
+
+
+-What is config.js in react?
+
+config.js in react is a js file which stores the configuration settings
+
+
+
+-What is microservice ?
+ 
+ microservice is architectural style that break the application into small independent services that
+communicate to each other through API, the services are owned by small contained teams 
+
+characterstics of microservices
+
+Autonomous - Each component services can be developed,operated,scaled without affecting the functionality of other services.
+
+
+-what is monolithic architecture
+
+Monolithic architecture is a traditional software development model that uses one code base to perform multiple business functions. 
+The components of a monolithic system are interdependent due to the data exchange mechanisms within the system
+Monolithic applications are single-tiered, which means they combine multiple components into one large application. 
+All the components are tightly coupled, meaning they must all be present for the software to run
+
+
+monolithic has three component 
+ 
+ client side user interface 
+ server side application
+ data interface
+
+
+
+-What are various ways to add images into our App? Explain with code examples?
+
+Use the import keyword.
+Use the require keyword.
+Import SVGs directly as a React component.
+Load images directly from the network.
+
+
+-What is lazy loading /chunking/code splitting/on demand loading/ dynamic loading ?
+
+ lazy lets you defer loading a components till its  render first time
+ allows you to render a dynamic import as a normal component,
+ and the bundle containing it is automatically loaded when the component is rendered
+
+Faster initial loading, Less bandwidth consumption, Preserving system resources, and Reduced work for the browser. 
+
+-What is suspense?
+
+Suspense is a React feature that allows developers to display a temporary or "fallback" UI while waiting for data to load.

@@ -1,0 +1,49 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "# parcel",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest",
+    "test-watch" :"jest --watchAll"
+  },
+  "author": "Alankar",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.6",
+    "@types/jest": "^29.5.12",
+    "babel-jest": "^29.7.0",
+    "eslint-plugin-jest-dom": "^5.4.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.38",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.24.1",
+    "@reduxjs/toolkit": "^2.2.3",
+    "formik": "^2.4.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.1",
+    "react-router-dom": "^6.22.3"
+  },
+  "browserslist": [
+    "last 2 version"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-1evi/namaste-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/A-1evi/namaste-react/issues"
+  },
+  "homepage": "https://github.com/A-1evi/namaste-react#readme"
+}
