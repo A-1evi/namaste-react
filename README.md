@@ -10,3 +10,7 @@
 -configure parcel file to disable default babel transpilation
 -jest npx jest --init
 -install jsdom lib
+
+
+#Add CORS extension to bypass it to see restaurant
+
